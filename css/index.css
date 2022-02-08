@@ -1,13 +1,20 @@
 :root {
+  /* theme colors */
   --bg-color: #161819;
   --bg-deep: #0d1011;
   --surface-color: #252728;
   --primary-color: #ff5f52;
+  --text-color: #cecdce;
+  /* padding values*/
+  --internal-space: 40px;
 }
 
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -23,15 +30,19 @@ body {
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;
+  padding: var(--internal-space);
 }
 
 .left-column {
-  width: 15%;
-  padding: 100px 30px;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .middle-column {
   width: 75%;
+  margin: 0px var(--internal-space);
 }
 
 .right-column {
@@ -50,22 +61,114 @@ body {
   border-width: 0;
 }
 
-.menu-item {
+dl.menu-list {
   display: flex;
-  align-items: center;
-  color: #f3f3f3da;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 60px;
 }
 
 dd.menu-item {
-  padding: 5px 15px;
-  border-radius: 10px;
+  padding: 4px 15px;
+  border-radius: 5px;
   margin: 10px auto;
+  display: inline-flex;
+  align-items: center;
+
+  width: 100%;
 }
 
 dd.menu-item.active {
   background-color: var(--primary-color);
 }
 
-dd.menu-item > span.icon {
+svg {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
   margin-right: 10px;
+}
+
+.user-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--surface-color);
+  border-radius: 5px;
+  padding: 10px 8px;
+}
+
+.user-wrapper > .user-profile {
+  display: inline-flex;
+  align-items: center;
+}
+
+.user-wrapper > .user-profile > .user-icon {
+  width: 20px;
+  height: 20px;
+  background-color: hotpink;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.user-hello {
+  font-weight: 700;
+  font-size: x-large;
+  margin-bottom: 30px;
+}
+
+main {
+  padding: 20px;
+  background-color: var(--bg-deep);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main > .stats {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: var(--surface-color);
+}
+
+div.group {
+  display: inline-flex;
+  align-items: center;
+}
+
+div.group > div.summary {
+  margin-right: 20px;
+}
+
+div.group > div.summary > p:first-child,
+div.group > div.summary > p:last-child {
+  font-size: 12px;
+  font-weight: 300;
+}
+div.group > div.summary > p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+div.group > svg.circle-progress {
+  width: 50px;
+  height: 50px;
+  transform: rotateY(3.142rad);
+}
+
+.track {
+  stroke-width: 25;
+  stroke: rgb(59, 56, 56);
+  fill: none;
+}
+
+.progress {
+  stroke-width: 25;
+  stroke: hotpink;
+  fill: none;
+  stroke-linecap: square;
 }
