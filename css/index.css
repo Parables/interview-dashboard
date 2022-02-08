@@ -34,19 +34,20 @@ body {
 }
 
 .left-column {
-  width: 10%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0px 20px;
 }
 
 .middle-column {
-  width: 75%;
+  width: 65%;
   margin: 0px var(--internal-space);
 }
 
 .right-column {
-  width: 20%;
+  width: 25%;
 }
 
 .sr-only {
@@ -118,7 +119,7 @@ svg {
 }
 
 main {
-  padding: 20px;
+  padding: 40px;
   background-color: var(--bg-deep);
   width: 100%;
   display: flex;
@@ -131,7 +132,7 @@ main > .stats {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: var(--surface-color);
 }
 
@@ -171,4 +172,72 @@ div.group > svg.circle-progress {
   stroke: hotpink;
   fill: none;
   stroke-linecap: square;
+}
+
+.rankings {
+  margin: 40px auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rankings > .applicant {
+  background-color: var(--surface-color);
+  padding: 90px 60px 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rankings > .applicant > .applicant-background {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background-color: yellow;
+  margin-bottom: 20px;
+}
+
+.rankings > .applicant > .applicant-background > img {
+  width: 100%;
+  height: 125%;
+  border-radius: 60px;
+  /* object-fit: contain; */
+  position: absolute;
+  top: -30px;
+}
+
+.rankings > .applicant > .applicant-background > span {
+  position: absolute;
+  right: -50px;
+  background-color: #2b2d2e;
+  padding: 1px 20px;
+  border-radius: 20px;
+}
+
+div.rankings > div.applicant > p {
+  margin: 5px auto;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+div.rankings > div.applicant > p.applicant-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+div.rankings > div.applicant > p > span.total-points {
+  font-weight: 800;
+}
+
+div.rankings > div.applicant > button {
+  width: 100%;
+  padding: 12px 40px;
+  margin: 20px auto;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgb(63, 63, 63);
+  border-radius: 8px;
 }
