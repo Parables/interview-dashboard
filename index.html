@@ -131,7 +131,7 @@
         <!-- user profile -->
         <div class="user-wrapper">
           <span class="user-profile">
-            <span class="user-icon"></span>
+            <span class="user-icon" alt="" />
             <span class="user-name">Thomas</span>
           </span>
           <svg
@@ -152,6 +152,7 @@
       <!-- middle column -->
       <div class="middle-column">
         <p class="user-hello">Hello, Leslie Alexander 👋</p>
+        <!-- main content -->
         <main>
           <!-- stats card -->
           <div class="stats">
@@ -261,7 +262,90 @@
               <button>View Details</button>
             </div>
           </div>
-          <div class="schedule"></div>
+
+          <!-- interview schedule -->
+          <div class="schedule">
+            <!-- table caption -->
+            <div class="caption">
+              <p>Interview Schedule</p>
+              <button>
+                Today
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- interview schedule table -->
+            <table>
+              <thead>
+                <tr>
+                  <th>Candidate Name</th>
+                  <th>Post Name</th>
+                  <th>Designation</th>
+                  <th>Time</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- 1st row -->
+                <tr>
+                  <td>
+                    <img src="assets/images/man3.png" alt="" />
+                    <span> Thomas Alva </span>
+                  </td>
+                  <td>Developer</td>
+                  <td>Backend</td>
+                  <td>11:30 AM</td>
+                  <td data-status="incomplete"><span> Incomplete </span></td>
+                </tr>
+                <!-- 2nd row -->
+                <tr>
+                  <td>
+                    <img src="assets/images/man3.png" alt="" />
+                    <span> Masum Billah </span>
+                  </td>
+                  <td>Designer</td>
+                  <td>UI/UX</td>
+                  <td>12:00 PM</td>
+                  <td data-status="completed">
+                    <span>Completed</span>
+                  </td>
+                </tr>
+                <!-- 3rd row -->
+                <tr>
+                  <td>
+                    <img src="assets/images/man3.png" alt="" />
+                    <span> Smith Liwes </span>
+                  </td>
+                  <td>Content Writer</td>
+                  <td>Writer</td>
+                  <td>12:30 PM</td>
+                  <td data-status="processing"><span>Processing</span></td>
+                </tr>
+                <!-- 4th row -->
+                <tr>
+                  <td>
+                    <img src="assets/images/man3.png" alt="" />
+                    <span> Thomas Alva </span>
+                  </td>
+                  <td>Developer</td>
+                  <td>Backend</td>
+                  <td>11:30 AM</td>
+                  <td data-status="incomplete"><span>Incomplete</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </main>
       </div>
 

@@ -5,8 +5,10 @@
   --surface-color: #252728;
   --primary-color: #ff5f52;
   --text-color: #cecdce;
+  --border-color: rgb(63, 63, 63);
   /* padding values*/
-  --internal-space: 40px;
+  --internal-space: 30px;
+  --card-border-radius: 8px;
 }
 
 * {
@@ -115,11 +117,11 @@ svg {
 .user-hello {
   font-weight: 700;
   font-size: x-large;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 main {
-  padding: 40px;
+  padding: 30px;
   background-color: var(--bg-deep);
   width: 100%;
   display: flex;
@@ -132,7 +134,7 @@ main > .stats {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 30px;
-  border-radius: 8px;
+  border-radius: var(--card-border-radius);
   background-color: var(--surface-color);
 }
 
@@ -174,7 +176,7 @@ div.group > svg.circle-progress {
   stroke-linecap: square;
 }
 
-.rankings {
+main > .rankings {
   margin: 40px auto;
   width: 100%;
   display: flex;
@@ -184,7 +186,7 @@ div.group > svg.circle-progress {
 
 .rankings > .applicant {
   background-color: var(--surface-color);
-  padding: 90px 60px 20px;
+  padding: 70px 60px 20px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -238,6 +240,104 @@ div.rankings > div.applicant > button {
   margin: 20px auto;
   appearance: none;
   background-color: transparent;
-  border: 2px solid rgb(63, 63, 63);
+  border: 2px solid var(--border-color);
   border-radius: 8px;
+}
+
+main > div.schedule {
+  background-color: var(--surface-color);
+  padding: 20px;
+  border-radius: var(--card-border-radius);
+}
+
+main > div.schedule > .caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+main > div.schedule > .caption > p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+main > div.schedule > .caption > button {
+  appearance: none;
+  background-color: transparent;
+  padding: 8px 5px 8px 15px;
+  border: 1px solid rgb(27, 27, 27);
+  border-radius: 5px;
+}
+
+main > div.schedule > .caption > button > svg {
+  margin-left: 10px;
+}
+
+main > div.schedule > table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+main > div.schedule > table th {
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+main > div.schedule > table th,
+main > div.schedule > table td {
+  padding: 15px;
+}
+main > div.schedule > table td:first-child {
+  display: inline-flex;
+  align-items: center;
+}
+
+main > div.schedule > table tr:nth-child(even) {
+  background-color: var(--border-color);
+}
+
+main > div.schedule > table tr:nth-child(even) > td:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+main > div.schedule > table tr:nth-child(even) > td:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+main > div.schedule > table td > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: grey;
+  margin-right: 10px;
+}
+
+main > div.schedule > table td[data-status="incomplete"] > span {
+  background-color: #25313b;
+  color: #2671ae;
+  font-weight: 800;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+main > div.schedule > table td[data-status="completed"] > span {
+  background-color: #35443d;
+  color: #3e9260;
+  font-weight: 800;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+main > div.schedule > table td[data-status="processing"] > span {
+  background-color: #3b3829;
+  color: #c6a42c;
+  font-weight: 800;
+  padding: 5px 20px;
+  border-radius: 5px;
 }
